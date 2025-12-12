@@ -1,13 +1,24 @@
 /* BASIC RESET */
+/* ===== FINBEE BRAND VARIABLES ===== */
+:root {
+  --finbee-navy: #0A2E82;
+  --finbee-navy-dark: #061D55;
+  --finbee-accent-bg: #EEF2FB;
+  --finbee-text-main: #0A1A2F;
+  --finbee-text-muted: #667085;
+}
+
+/* ===== RESET ===== */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* ===== BASE ===== */
 body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #0A1A2F;
+  color: var(--finbee-text-main);
   background-color: #f7f7f9;
   line-height: 1.6;
 }
@@ -24,7 +35,7 @@ body {
 }
 
 .section-accent {
-  background-color: #eef3fb;
+  background-color: var(--finbee-accent-bg);
 }
 
 /* HEADER */
@@ -43,22 +54,24 @@ body {
   display: flex;
   align-items: center;
   text-decoration: none;
-  color: #0A1A2F;
 }
 
-.brand-mark {
-  font-size: 1.6rem;
-  margin-right: 0.4rem;
+.brand-logo {
+  height: 40px;   /* adjust if needed: 36–48px */
+  width: auto;
+  display: block;
 }
 
+/* If you ever use text logo again */
 .brand-name {
   font-weight: 700;
   letter-spacing: 0.06em;
+  color: var(--finbee-text-main);
 }
 
 .brand-tagline {
   font-size: 0.8rem;
-  color: #687389;
+  color: var(--finbee-text-muted);
   margin-left: 0.5rem;
 }
 
@@ -76,7 +89,7 @@ body {
 
 .nav-link.is-active,
 .nav-link:hover {
-  color: #0052cc;
+  color: var(--finbee-navy);
 }
 
 /* BUTTONS */
@@ -91,22 +104,22 @@ body {
 }
 
 .btn-primary {
-  background-color: #0052cc;
+  background-color: var(--finbee-navy);
   color: #ffffff;
 }
 
 .btn-primary:hover {
-  background-color: #003f99;
+  background-color: var(--finbee-navy-dark);
 }
 
 .btn-secondary {
   background-color: #ffffff;
-  color: #0052cc;
-  border-color: #0052cc;
+  color: var(--finbee-navy);
+  border-color: var(--finbee-navy);
 }
 
 .btn-secondary:hover {
-  background-color: #eef3fb;
+  background-color: var(--finbee-accent-bg);
 }
 
 /* HERO */
@@ -148,7 +161,7 @@ body {
 }
 
 .section-intro {
-  color: #667085;
+  color: var(--finbee-text-muted);
   max-width: 640px;
   margin-bottom: 1.5rem;
 }
@@ -186,7 +199,7 @@ body {
 
 /* FOOTER */
 .site-footer {
-  background-color: #0A1A2F;
+  background-color: var(--finbee-navy);
   color: #e5e7eb;
   padding: 1.5rem 0;
   margin-top: 2rem;
@@ -195,7 +208,19 @@ body {
 .footer-inner {
   display: flex;
   justify-content: center;
+  align-items: center;
+  gap: 1rem;
   font-size: 0.9rem;
+}
+
+.footer-link {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.footer-link:hover {
+  text-decoration: underline;
 }
 
 /* RESPONSIVE */
